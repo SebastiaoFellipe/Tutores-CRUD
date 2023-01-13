@@ -10,6 +10,7 @@ $t_controller = new tutorController();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TuTores</title>
     <link rel="stylesheet" href="../css/cadastro.css">
+    <script src="../javascript/javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
@@ -20,7 +21,7 @@ $t_controller = new tutorController();
         <a href="index.php" class="linkbtn">Voltar</a>
     </header>
     <div class="container shadow p-3 mb-5 bg-body rounded">
-        <form action="../controller/acoes.php?operacao=inserir_tutor" method="POST">
+        <form action="../controller/acoes.php?operacao=inserir_tutor" method="POST" name="form" onsubmit="return ValidaCampo()">
             <h2>Dados pessoais</h2><br>
             <div class="row g-2">
                 <div class="col-md-9">
@@ -35,7 +36,7 @@ $t_controller = new tutorController();
             <div class="row">
                 <div class="col-md-5">
                     <label for="email">E-mail</label><br>
-                    <input class="form-control" type="email" name="email" placeholder="email@email.com">
+                    <input class="form-control" type="text" name="email" placeholder="email@email.com">
                 </div>
                 <div class="col-md-3">
                     <label for="numerotelefone">Número de Telefone</label><br>
